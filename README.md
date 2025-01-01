@@ -7,7 +7,7 @@
      ![E-Commerce API ER Diagram](images\Database ER diagram (crow's foot) (1).png)
      ```
 
-## Features
+### Features
 * Customer and vendor features:
 - User authentication and validation with token
 - User login and register
@@ -20,7 +20,8 @@
 -  Integreation with shopify
 
 
-## Technologies Used
+### Technologies Used
+
 -Java
 - Spring Boot
 - Spring Data JPA
@@ -30,7 +31,7 @@
 - Shopify
 - Postman for API documentation
 
-## Setup Instructions
+### Setup Instructions
 
 * Before running the API server, you should update the database config inside the [application.properties](demod\src\main\resources\application.properties) file. 
 * Update the port number, username and password as per your local database config.
@@ -62,7 +63,7 @@
 
 * `POST /regestier` : Register a new customer
 * `GET /login` : Logging in customer with valid token and email
-* `GET /token: Get token with valid email, password and bussines name if vendor
+* `GET /token`: Get token with valid email, password and bussines name if vendor
 * `POST /cart/addtocart` : Add product to cart
 * `DELETE /cart/deletecart` : Delete from cart with valid email and product id
 
