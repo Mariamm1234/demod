@@ -4,7 +4,7 @@
 ## E-R Diagram for the Application
 
  ```markdown
-     ![Alt Text](images\Database ER diagram (crow's foot) (1).png)
+     ![E-Commerce API ER Diagram](images\Database ER diagram (crow's foot) (1).png)
      ```
 
 ## Features
@@ -37,17 +37,18 @@
 1. Clone the repository:
    ```bash
    git clone[ https://github.com/your-repo.git](https://github.com/Mariamm1234/Demod.git)
-2. Run docker and use postgres image on it
    ```
+2. Run docker and use postgres image on it
+```
    $ docker run --name some-postgres -e POSTGRES_PASSWORD_FILE=/run/secrets/postgres-passwd -d postgres
    ```
-3. Run database file from cmd
+4. Run database file from cmd
    ```
    $ docker cp test2.sql [docker container name]:/
    $ docker container exec -it [docker container name] bash
    $psql -U postgres --file test2.sql
    ```
-4. Run progect from editor terminal
+5. Run progect from editor terminal
    ```
    ./mvnw clean spring-boot:run 
    ```
