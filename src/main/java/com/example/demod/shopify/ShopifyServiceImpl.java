@@ -26,10 +26,12 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Service
 public class ShopifyServiceImpl implements ShopifyService {
-    private static final String SHOPIFY_API_URL = "https://vw190g-xz.myshopify.com/admin/api/2023-04/";
-    private static final String ACCESS_TOKEN="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";
-    // private static final String API_KEY="6331492cdc3ea5329d95c0291ecede89";
-    // private static final String API_SECRET_KEY="8e3625386bd272244def1b42309c155a";
+    //UNCODE THEM IN USE
+
+    private static final String SHOPIFY_API_URL ="";// "https://vw190g-xz.myshopify.com/admin/api/2023-04/";
+    private static final String ACCESS_TOKEN="";//"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";
+    private static final String API_KEY="";//6331492cdc3ea5329d95c0291ecede89";
+    private static final String API_SECRET_KEY="";//8e3625386bd272244def1b42309c155a";
     // @Value("${shopify.access.token}")
     // private String accessToken;
 
