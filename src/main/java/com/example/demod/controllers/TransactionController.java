@@ -40,12 +40,12 @@ public class TransactionController {
 
 
     @Async
-    @GetMapping(path = "/vendortransaction/{param}", consumes = MediaType.ALL_VALUE)
-    public CompletableFuture<ResponseEntity<Map<String, Double>>> getMethodName(@PathVariable String param) {
+    @GetMapping(path = "/vendortransaction/{vendorEmail}", consumes = MediaType.ALL_VALUE)
+    public CompletableFuture<ResponseEntity<Map<String, Double>>> getTransaction(@PathVariable String vendorEmail) {
 
         try {
             return CompletableFuture.supplyAsync(()->{
-                Map<String, Double> res=transactionService.getVendorAccountDetails(param);
+                Map<String, Double> res=transactionService.getVendorAccountDetails(vendorEmail);
                 return new ResponseEntity<>(res,HttpStatus.OK);
             })  ;    
           } catch (Exception e) {

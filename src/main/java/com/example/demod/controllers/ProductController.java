@@ -18,6 +18,7 @@ import com.example.demod.entities.Product;
 import com.example.demod.exceptions.EtAuthException;
 import com.example.demod.mapper.ProductMapper;
 import com.example.demod.services.Product.ProductService;
+import com.example.demod.shopify.ShopifyService;
 
 import jakarta.transaction.Transactional;
 import jakarta.websocket.server.PathParam;
@@ -47,6 +48,8 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
+    @Autowired
+    ShopifyService shopifyService;
     @Async
     @GetMapping(path = "/allproducts")
 
@@ -55,6 +58,7 @@ public class ProductController {
     try {
         return CompletableFuture.supplyAsync(()->{
             ArrayList<ProductDto>pr=productService.getProducts();
+            //shopifyService.getProducts();
             if(pr.isEmpty())
             throw new EtAuthException("No products!!");
             return new ResponseEntity<>(pr,HttpStatus.OK);
@@ -81,6 +85,7 @@ public class ProductController {
          return new ResponseEntity<> (pr,HttpStatus.CONFLICT);
          else if(pr.getMessage().equals("new vendor"))
             return new ResponseEntity<> (pr,HttpStatus.CONTINUE);
+            //shopifyService.addProduct(pr,pr.vendorId);
          return new ResponseEntity<> (pr,HttpStatus.CREATED);
 
 
@@ -101,6 +106,7 @@ public class ProductController {
        return CompletableFuture.supplyAsync(() -> {
            try {
                String message = productService.deleteProduct(email, productId);
+               //shopifyService.deleteProduct(id);
                return ResponseEntity.status(HttpStatus.GONE).body(message);
            } catch (Exception e) {
                return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
