@@ -3,8 +3,8 @@
 - This API performs fundamental CRUD operations for an e-commerce platform.
 ## E-R Diagram for the Application
 
- ```markdown
-     ![E-Commerce API ER Diagram](images\Database ER diagram (crow's foot) (1).png)
+ ```
+src\main\java\com\example\demod\images\Database ER diagram (crow's foot) (1).png
      ```
 ```
 ### Features
