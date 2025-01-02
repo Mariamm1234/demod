@@ -6,7 +6,7 @@
  ```markdown
      ![E-Commerce API ER Diagram](images\Database ER diagram (crow's foot) (1).png)
      ```
-
+```
 ### Features
 * Customer and vendor features:
 - User authentication and validation with token
@@ -22,14 +22,15 @@
 
 ### Technologies Used
 
--Java
+- Java
 - Spring Boot
 - Spring Data JPA
 - Hibernate
 - Postgresdb
 - Docker
 - Shopify
-- Postman for API documentation
+- Postman for API testing
+- Swagger for api documentaion
 
 ### Setup Instructions
 
