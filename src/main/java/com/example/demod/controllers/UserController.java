@@ -46,7 +46,7 @@ UserService userService;
     }
 
     @Async
-    @GetMapping(path = "/token")
+    @PostMapping(path = "/token")
     public CompletableFuture<ResponseEntity<TokenDto>> getToken(@RequestBody LoginDto user){
         try {
             return CompletableFuture.supplyAsync(()->{
